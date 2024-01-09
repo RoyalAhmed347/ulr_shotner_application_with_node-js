@@ -1,0 +1,61 @@
+<html>
+  <head>
+    {{>header}}
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>URL Shortener</title>
+    <style>
+      a{
+        text-decoration: none;
+        color: white;
+      }
+      tr td {
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    {{>nav}}
+    <div class="maincontainer">
+      <h1>URL Shortener</h1>
+      <form action="/url" method="post">
+        <label for="long-url">Enter or Paste Your long URL:</label>
+        <input type="text" id="long-url" name="url" />
+        <button type="submit" id="shorten-btn">Shorten</button>
+      </form>
+      <div id="short-url-container">
+        <h3>
+        <p>Here's your shortened URL:</p>
+        </h3>
+        <div id="short-url">
+  <table class="table ">
+  <thead>
+    <tr>
+      {{!-- <th scope="col">#id</th>
+      <th scope="col">Original url</th> --}}
+      <th scope="col">Short url</th>
+      <th scope="col">Analyze url</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each allLinks }}
+      <tr>
+      {{!-- <th class=" bg-transparent" scope="row">{{this.short_id}}</th>
+      <td class="bg-transparent"><a target="_ahmed" href={{redrect_url}}>{{redrect_url}}</a></td> --}}
+      <td class="bg-transparent"><a target="_ahmed" href={{temp_url}}>{{temp_url}}</a></td>
+      <td class="bg-transparent"><a target="_ahmed" href={{analize_url}}>Track url</a></td>
+    </tr>
+    {{/each}}
+    
+  </tbody>
+</table>
+          
+        </div>
+      </div>
+      <div class="credit">Made with
+        <span style="color:rgb(255, 71, 111);font-size:20px;">❤ </span>by<a
+          href="https://www.royalahmed.netlify.com/"
+        > Royal Ahmed</a></div>
+    </div>
+  </body>
+</html>

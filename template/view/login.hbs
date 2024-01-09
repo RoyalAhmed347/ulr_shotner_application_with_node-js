@@ -1,0 +1,27 @@
+<html>
+  <head>
+    {{!-- {{>header}} --}}
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>URL Shortener</title>
+    <style>
+      .maincontainer{
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    {{>nav}}
+    <div class="maincontainer">
+      <h1>login</h1>
+      <form action="/user/login" method="post">
+
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" />
+        <label for="password">Password</label>
+        <input type="text" id="password" name="password" />
+        <button type="submit" id="shorten-btn">Login</button>
+      </form>
+     
+  </body>
+</html>

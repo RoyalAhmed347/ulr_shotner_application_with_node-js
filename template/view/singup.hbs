@@ -1,0 +1,28 @@
+<html>
+  <head>
+    {{!-- {{>header}} --}}
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>Singup</title>
+    <style>
+      .maincontainer{
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    {{>nav}}
+    <div class="maincontainer">
+      <h1>Singup</h1>
+      <form action="/user/singup" method="post">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" />
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" />
+        <label for="password">Password</label>
+        <input type="text" id="password" name="password" />
+        <button type="submit" id="shorten-btn">Singup</button>
+      </form>
+     
+  </body>
+</html>

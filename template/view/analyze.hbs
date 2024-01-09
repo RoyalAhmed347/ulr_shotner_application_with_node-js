@@ -1,0 +1,56 @@
+<html>
+  <head>
+    {{>header}}
+
+    <title>URL Shortener</title>
+    <link rel="stylesheet" href="../../css/style.css" />
+    <style>
+      a{
+        text-decoration: none;
+        color: white;
+      }
+      tr td {
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    {{>nav}}
+    <div class="maincontainer">
+      
+      <div id="short-url-container">
+        <h3>
+        <p>Short ID: {{link.short_id}}</p>
+        </h3>
+        <div id="short-url">
+  <table class="table ">
+  <thead>
+    <tr>
+      <th scope="col">Owner</th>
+      <th scope="col">Original url</th>
+      <th scope="col">Short url</th>
+      <th scope="col">TotalClick</th>
+      <th scope="col">Delete url</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+      <th class=" bg-transparent" scope="row">{{link.owner}}</th>
+      <td class="bg-transparent">{{link.redrect_url}}</td>
+      <td class="bg-transparent">{{link.temp_url}}</td>
+      <td class="bg-transparent">{{link.totalClick}}</td>
+      <td class="bg-transparent">Delete</td>
+    </tr>
+    
+  </tbody>
+</table>
+          
+        </div>
+      </div>
+      <div class="credit">Made with
+        <span style="color:rgb(255, 71, 111);font-size:20px;">❤ </span>by<a
+          href="https://www.royalahmed.netlify.com/"
+        > Royal Ahmed</a></div>
+    </div>
+  </body>
+</html>
